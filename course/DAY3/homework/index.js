@@ -3,6 +3,8 @@ const colors = ["#1abc9c", "#3498db", "#9b59b6", "#f39c12", "#e74c3c"];
 
 const title = document.querySelector("h2");
 
+title.style.display = 'inline-block';
+
 const superEventHandler = {
   handleClick: function () {
     title.innerHTML = "Clicked!";
