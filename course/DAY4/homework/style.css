@@ -1,0 +1,20 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  .blue {
+    background-color: aqua;
+  }
+  
+  .purple {
+    background-color: purple;
+  }
+  
+  .yellow {
+    background-color: goldenrod;
+  }
+  
+  h2 {
+    color: rgb(216, 224, 231);
+  }
+  
