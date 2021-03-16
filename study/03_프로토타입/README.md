@@ -70,6 +70,59 @@ console.log(bar.constructor); // Object()
 
 ## this
 
+### 함수에서의 this
+
+함수 안에 있는 this는 함수의 주인에게 바인딩됩니다. 함수의 주인은 전역객체입니다.
+
+```javascript
+function test(){
+    console.log(this);
+}
+test() 
+```
+
+### 메서드에서의 this
+
+메서드에 있는 `this`는 메서드를 호출한 객체로 바인딩됩니다.
+
+```javascript
+const person = {
+    name: "byungwook",
+    sayHello: function(){
+        console.log(this.name);
+    },
+};
+
+person.sayHello() // "byungwook"
+```
+
+### 이벤트 핸들러에서의 this
+
+이벤트 핸들러에서의 `this`는 이벤트를 받는 HTML 요소를 가리킵니다.
+
+```javascript
+const btn = document.querySelector('#btn');
+btn.addEventListener('click', function(){
+    console.log(this); // '#btn'
+});
+```
+
+### 생성자에서의 this
+
+생성되는 객체로 바인딩됩니다.
+
+```javascript
+function Person(name){
+    this.name = name;
+}
+
+const son = new Person('son');
+
+console.log(son.name); // son
+```
+
+### 프로토타입에서의 this
+
 `this`는 프로토타입에 영향을 받지 않습니다.   
 `this`는 어디에서 호출했든 상관없이 `.`앞에 있는 객체를 가리킵니다.  
 아래 코드를 통해 예시를 들어봅시다.
